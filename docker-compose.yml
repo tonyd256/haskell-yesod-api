@@ -1,6 +1,6 @@
 web:
   build: .
-  command: runghc main.hs
+  command: cabal run yesod-api
   stdin_open: true
   volumes:
     - .:/app
