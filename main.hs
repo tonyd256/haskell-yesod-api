@@ -9,9 +9,7 @@ import Data.Streaming.Network.Internal
 
 data YesodAPI = YesodAPI
 
-mkYesod "YesodAPI" [parseRoutes|
-/ HomeR GET
-|]
+mkYesod "YesodAPI" $(parseRoutesFile "config/routes")
 
 instance Yesod YesodAPI
 
